@@ -1,0 +1,73 @@
+/* style for all page1.html */
+.background{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe Script;
+}
+
+/* style for first text */
+.text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+/* style for second text */
+.text2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* style for all tags in body (only background)*/
+body{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* min-height: 100vh; */
+    background: #111;
+}
+
+/* style for all tags in h1 (so that it can be colored)*/
+h1{
+    display: flex;
+    color: transparent;
+    font-size: 7vw; /*7vw*/
+}
+
+
+/* style for all tags in h1 then span (for color animation)*/
+h1 span{
+    animation: animate 3s linear infinite;
+}
+
+/* Color animation from h1 and span */
+@keyframes animate{
+    0%{
+        color: #fff;
+        filter: blur(1px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+    }
+    30%,70%{
+        color: #fff;
+        filter: blur(1px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 300px #00b3ff;
+    }
+    100%{
+        color: transparent;
+        box-shadow: none;
+    }
+}
